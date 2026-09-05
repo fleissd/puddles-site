@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Puddles — puppy potty training, tracked</title>
 <meta name="description" content="Take the stress out of potty training. Track your puppy's routine, keep track of the next walk with automatic timers, and sync updates across your household in real-time.">
+<link rel="icon" type="image/png" href="./icon.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap">
@@ -30,7 +32,15 @@
   .wrap { max-width: 44rem; margin: 0 auto; padding: 4.5rem 1.5rem 5rem; }
 
   .hero { text-align: center; margin-bottom: 3.25rem; }
-  .paw { font-size: 3rem; line-height: 1; margin: 0 0 0.75rem; }
+  /* Sized and rounded like an app icon rather than dropped in as a picture: the 22.5%
+     radius is the ratio iOS uses for its own rounded-square mask. */
+  .appicon {
+    width: 132px; height: 132px;
+    border-radius: 22.5%;
+    display: block;
+    margin: 0 auto 1.1rem;
+    box-shadow: 0 6px 18px rgba(61, 64, 91, 0.16);
+  }
   h1 { font-weight: 700; font-size: clamp(2.2rem, 7vw, 3.2rem); line-height: 1.1; margin: 0 0 0.9rem; }
   .tagline { font-size: 1.15rem; color: var(--muted); margin: 0 auto; max-width: 32rem; }
 
@@ -76,7 +86,8 @@
 <div class="wrap">
 
   <div class="hero">
-    <p class="paw">&#128062;</p>
+    <img class="appicon" src="./icon.png" width="512" height="512"
+         alt="The Puddles app icon: a puppy lying down, chewing its lead">
     <h1>Puddles</h1>
     <p class="tagline">Take the stress out of potty training. Track your puppy&rsquo;s routine, keep track of the next walk with automatic timers, and sync updates across your household in real-time.</p>
   </div>
